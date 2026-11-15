@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="RedBurguer: burgers artesanais, combos e bons momentos.">
+        <title>Entrar | RedBurguer</title>
+
+        <link rel="icon" href="imagens/burger.svg" type="image/svg+xml">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/login.css">
+    </head>
+
+    <body class="claro">
+        <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+        <header>
+            <div class="largura">
+                <a class="logo" href="index.html" aria-label="RedBurguer - Início"></a>
+
+                <button id="abrir-menu" type="button" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">
+                    <span class="icone menu" aria-hidden="true"></span>
+                </button>
+
+                <nav id="menu" aria-label="Menu principal">
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+
+                        <li><a href="produtos.html">Produtos</a></li>
+
+                        <li><a href="pedidos.html">Pedidos</a></li>
+
+                        <li><a href="carrinho.html">Carrinho</a></li>
+
+                        <li><a href="perfil.html">Perfil</a></li>
+                    </ul>
+
+                    <div id="conta">
+                        <a class="botao borda" href="login.html">Entrar</a>
+                        <a class="botao" href="cadastro.html">Cadastrar</a>
+                    </div>
+                </nav>
+
+                <button id="trocar-tema" type="button" aria-label="Ativar modo escuro" aria-pressed="false">
+                    <span class="icone lua" aria-hidden="true"></span>
+                </button>
+            </div>
+        </header>
+
+        <main id="conteudo">
+            <section id="principal" class="largura">
+                <div id="esquerda">
+                    <p class="subtitulo">SEU LUGAR À MESA</p>
+                    <h1>O próximo<br>bom momento<br><span>começa aqui.</span></h1>
+                    <p>Seus favoritos, sempre por perto.</p>
+                    <div class="imagem" role="img" aria-label="Mascote RedBurguer"></div>
+                </div>
+
+                <div id="direita">
+                    <div id="abas">
+                        <a href="login.html" class="ativo" aria-current="page">Entrar</a>
+                        <a href="cadastro.html">Cadastrar</a>
+                    </div>
+
+                    <h2>Bem-vindo de volta!</h2>
+                    <p>Entre na sua conta e aproveite o melhor do RedBurguer.</p>
+
+                    <form id="form-login" method="post" novalidate>
+                        <div class="campo">
+                            <label for="email">E-mail</label>
+                            <input id="email" type="email" autocomplete="email" maxlength="150" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="senha">Senha</label>
+                            <div class="senha">
+                                <input id="senha" type="password" autocomplete="current-password" minlength="8" maxlength="128" required>
+                                <button type="button" class="mostrar-senha" data-campo="senha" aria-label="Mostrar senha" aria-pressed="false">
+                                    <span class="icone olho" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <p id="mensagem" role="status" hidden></p>
+                        <button id="entrar" class="botao" type="submit">Entrar na minha conta</button>
+                    </form>
+
+                    <p id="trocar-conta">Ainda não tem uma conta? <a href="cadastro.html">Cadastre-se</a>.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="largura">
+                <div id="marca">
+                    <a class="logo" href="index.html" aria-label="RedBurguer - Início"></a>
+                    <p>Mais que um lanche,<br>um bom momento.</p>
+                </div>
+
+                <div id="paginas">
+                    <h3>Explore</h3>
+                    <a href="produtos.html">Produtos</a>
+                    <a href="pedidos.html">Meus pedidos</a>
+                    <a href="carrinho.html">Carrinho</a>
+                </div>
+
+                <div id="sobre">
+                    <h3>Feito para aproximar.</h3>
+                    <p>Burgers no capricho, ingredientes frescos e aquele sabor que dá vontade de repetir.</p>
+                </div>
+            </div>
+
+            <p id="direitos">RedBurguer. Sabor que reúne.</p>
+        </footer>
+
+        <script src="js/tema.js"></script>
+        <script src="js/login.js"></script>
+        <script src="js/menu.js"></script>
+    </body>
+</html>

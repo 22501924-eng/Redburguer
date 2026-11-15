@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="RedBurguer: burgers artesanais, combos e bons momentos.">
+        <title>Meus pedidos | RedBurguer</title>
+
+        <link rel="icon" href="imagens/burger.svg" type="image/svg+xml">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/pedidos.css">
+    </head>
+
+    <body class="claro">
+        <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+        <header>
+            <div class="largura">
+                <a class="logo" href="index.html" aria-label="RedBurguer - Início"></a>
+
+                <button id="abrir-menu" type="button" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">
+                    <span class="icone menu" aria-hidden="true"></span>
+                </button>
+
+                <nav id="menu" aria-label="Menu principal">
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+
+                        <li><a href="produtos.html">Produtos</a></li>
+
+                        <li><a href="pedidos.html" class="ativo" aria-current="page">Pedidos</a></li>
+
+                        <li><a href="carrinho.html">Carrinho</a></li>
+
+                        <li><a href="perfil.html">Perfil</a></li>
+                    </ul>
+
+                    <div id="conta">
+                        <a class="botao borda" href="login.html">Entrar</a>
+                        <a class="botao" href="cadastro.html">Cadastrar</a>
+                    </div>
+                </nav>
+
+                <button id="trocar-tema" type="button" aria-label="Ativar modo escuro" aria-pressed="false">
+                    <span class="icone lua" aria-hidden="true"></span>
+                </button>
+            </div>
+        </header>
+
+        <main id="conteudo">
+            <section id="pedidos" class="largura">
+                <div class="titulo">
+                    <h1>Meus pedidos</h1>
+                    <a class="botao amarelo" href="produtos.html">Escolher produtos <span class="icone seta" aria-hidden="true"></span></a>
+                </div>
+
+                <div id="sem-pedidos" class="vazio">
+                    <span class="icone sacola" aria-hidden="true"></span>
+                    <h2>Qual vai ser o de hoje?</h2>
+                    <p>Escolha seu favorito no cardápio.</p>
+                </div>
+
+                <article id="pedido-1" class="pedido" data-id="1" data-nome="Combo Red Classic" data-preco="2990" data-imagem="combo-classic" hidden>
+                    <div class="imagem combo-classic" role="img" aria-label="Combo Red Classic"></div>
+
+                    <div class="texto">
+                        <h2>Combo Red Classic</h2>
+                        <p class="avaliacao"><span class="icone estrela" aria-hidden="true"></span> 4,8 / 5</p>
+                        <p>Carne suculenta, queijo derretido e salada fresquinha. Aquela primeira mordida que já melhora o dia.</p>
+
+                        <div class="ingredientes">
+                            <h3>Ingredientes</h3>
+                            <ul>
+                                <li>Pão brioche com gergelim</li>
+                                <li>Hambúrguer bovino de 150 g</li>
+                                <li>Queijo cheddar</li>
+                                <li>Alface e tomate</li>
+                                <li>Picles</li>
+                                <li>Molho da casa (maionese, ketchup, mostarda e páprica)</li>
+                            </ul>
+                            <p>Batata frita de 100 g com sal e refrigerante de cola de 350 ml.</p>
+                        </div>
+
+                        <div class="baixo">
+                            <strong class="preco">R$ 29,90</strong>
+                            <label>Quantidade
+                                <input class="quantidade" type="number" min="1" max="10" value="1" inputmode="numeric">
+                            </label>
+                        </div>
+
+                        <button class="botao guardar" type="button">Adicionar ao carrinho <span class="icone mais branca" aria-hidden="true"></span></button>
+                    </div>
+                </article>
+
+                <article id="pedido-2" class="pedido" data-id="2" data-nome="Combo Bacon Lovers" data-preco="3490" data-imagem="combo-bacon" hidden>
+                    <div class="imagem combo-bacon" role="img" aria-label="Combo Bacon Lovers"></div>
+
+                    <div class="texto">
+                        <h2>Combo Bacon Lovers</h2>
+                        <p class="avaliacao"><span class="icone estrela" aria-hidden="true"></span> 4,9 / 5</p>
+                        <p>Bacon douradinho, carne na chapa e cheddar no ponto. Um combo feito para quem sempre pede mais bacon.</p>
+
+                        <div class="ingredientes">
+                            <h3>Ingredientes</h3>
+                            <ul>
+                                <li>Pão brioche</li>
+                                <li>Hambúrguer bovino de 150 g</li>
+                                <li>Queijo cheddar</li>
+                                <li>Bacon crocante</li>
+                                <li>Molho da casa (maionese, ketchup, mostarda e páprica)</li>
+                            </ul>
+                            <p>Batata frita de 100 g com sal e refrigerante de cola de 350 ml.</p>
+                        </div>
+
+                        <div class="baixo">
+                            <strong class="preco">R$ 34,90</strong>
+                            <label>Quantidade
+                                <input class="quantidade" type="number" min="1" max="10" value="1" inputmode="numeric">
+                            </label>
+                        </div>
+
+                        <button class="botao guardar" type="button">Adicionar ao carrinho <span class="icone mais branca" aria-hidden="true"></span></button>
+                    </div>
+                </article>
+
+                <article id="pedido-3" class="pedido" data-id="3" data-nome="Combo Cheddar Supreme" data-preco="3790" data-imagem="combo-cheddar" hidden>
+                    <div class="imagem combo-cheddar" role="img" aria-label="Combo Cheddar Supreme"></div>
+
+                    <div class="texto">
+                        <h2>Combo Cheddar Supreme</h2>
+                        <p class="avaliacao"><span class="icone estrela" aria-hidden="true"></span> 4,9 / 5</p>
+                        <p>Duas carnes, cheddar de sobra e pão macio. Grande no tamanho, maior ainda na vontade de repetir.</p>
+
+                        <div class="ingredientes">
+                            <h3>Ingredientes</h3>
+                            <ul>
+                                <li>Pão brioche com gergelim</li>
+                                <li>Dois hambúrgueres bovinos de 100 g</li>
+                                <li>Porção dupla de queijo cheddar</li>
+                                <li>Alface e tomate</li>
+                                <li>Molho da casa (maionese, ketchup, mostarda e páprica)</li>
+                            </ul>
+                            <p>Batata frita de 100 g com sal e refrigerante de cola de 350 ml.</p>
+                        </div>
+
+                        <div class="baixo">
+                            <strong class="preco">R$ 37,90</strong>
+                            <label>Quantidade
+                                <input class="quantidade" type="number" min="1" max="10" value="1" inputmode="numeric">
+                            </label>
+                        </div>
+
+                        <button class="botao guardar" type="button">Adicionar ao carrinho <span class="icone mais branca" aria-hidden="true"></span></button>
+                    </div>
+                </article>
+
+                <article id="pedido-4" class="pedido" data-id="4" data-nome="Combo Crispy Chicken" data-preco="2790" data-imagem="combo-frango" hidden>
+                    <div class="imagem combo-frango" role="img" aria-label="Combo Crispy Chicken"></div>
+
+                    <div class="texto">
+                        <h2>Combo Crispy Chicken</h2>
+                        <p class="avaliacao"><span class="icone estrela" aria-hidden="true"></span> 4,8 / 5</p>
+                        <p>Frango empanado, salada fresquinha e maionese cremosa. Acompanha fritas e refri.</p>
+
+                        <div class="ingredientes">
+                            <h3>Ingredientes</h3>
+                            <ul>
+                                <li>Pão brioche com gergelim</li>
+                                <li>Filé de frango de 150 g</li>
+                                <li>Empanado de farinha de trigo e ovos</li>
+                                <li>Alface e tomate</li>
+                                <li>Maionese (óleo, ovos, limão e sal)</li>
+                            </ul>
+                            <p>Batata frita de 100 g com sal e refrigerante de cola de 350 ml.</p>
+                        </div>
+
+                        <div class="baixo">
+                            <strong class="preco">R$ 27,90</strong>
+                            <label>Quantidade
+                                <input class="quantidade" type="number" min="1" max="10" value="1" inputmode="numeric">
+                            </label>
+                        </div>
+
+                        <button class="botao guardar" type="button">Adicionar ao carrinho <span class="icone mais branca" aria-hidden="true"></span></button>
+                    </div>
+                </article>
+
+                <article id="pedido-5" class="pedido" data-id="5" data-nome="Combo Onion Rings" data-preco="2490" data-imagem="combo-onion" hidden>
+                    <div class="imagem combo-onion" role="img" aria-label="Combo Onion Rings"></div>
+
+                    <div class="texto">
+                        <h2>Combo Onion Rings</h2>
+                        <p class="avaliacao"><span class="icone estrela" aria-hidden="true"></span> 4,7 / 5</p>
+                        <p>Anéis de cebola douradinhos, fritas e molho da casa. Com refri para completar.</p>
+
+                        <div class="ingredientes">
+                            <h3>Ingredientes</h3>
+                            <ul>
+                                <li>Cebola em anéis de 150 g</li>
+                                <li>Empanado de farinha de trigo, ovos, leite e sal</li>
+                                <li>Óleo para fritura</li>
+                                <li>Molho da casa (maionese, ketchup, mostarda e páprica)</li>
+                            </ul>
+                            <p>Batata frita de 100 g com sal e refrigerante de cola de 350 ml.</p>
+                        </div>
+
+                        <div class="baixo">
+                            <strong class="preco">R$ 24,90</strong>
+                            <label>Quantidade
+                                <input class="quantidade" type="number" min="1" max="10" value="1" inputmode="numeric">
+                            </label>
+                        </div>
+
+                        <button class="botao guardar" type="button">Adicionar ao carrinho <span class="icone mais branca" aria-hidden="true"></span></button>
+                    </div>
+                </article>
+
+                <article id="pedido-6" class="pedido" data-id="6" data-nome="Combo Sweet Burger" data-preco="2690" data-imagem="combo-doce" hidden>
+                    <div class="imagem combo-doce" role="img" aria-label="Combo Sweet Burger"></div>
+
+                    <div class="texto">
+                        <h2>Combo Sweet Burger</h2>
+                        <p class="avaliacao"><span class="icone estrela" aria-hidden="true"></span> 4,8 / 5</p>
+                        <p>Brioche com chocolate e morangos frescos. Um final feliz com fritas e refri.</p>
+
+                        <div class="ingredientes">
+                            <h3>Ingredientes</h3>
+                            <ul>
+                                <li>Pão brioche</li>
+                                <li>Creme de chocolate (chocolate ao leite e creme de leite)</li>
+                                <li>Morangos frescos</li>
+                                <li>Calda de chocolate</li>
+                            </ul>
+                            <p>Batata frita de 100 g com sal e refrigerante de cola de 350 ml.</p>
+                        </div>
+
+                        <div class="baixo">
+                            <strong class="preco">R$ 26,90</strong>
+                            <label>Quantidade
+                                <input class="quantidade" type="number" min="1" max="10" value="1" inputmode="numeric">
+                            </label>
+                        </div>
+
+                        <button class="botao guardar" type="button">Adicionar ao carrinho <span class="icone mais branca" aria-hidden="true"></span></button>
+                    </div>
+                </article>
+
+                <article id="pedido-7" class="pedido" data-id="7" data-nome="Batata + Refri" data-preco="1290" data-imagem="batata" hidden>
+                    <div class="imagem batata" role="img" aria-label="Batata + Refri"></div>
+
+                    <div class="texto">
+                        <h2>Batata + Refri</h2>
+                        <p class="avaliacao"><span class="icone estrela" aria-hidden="true"></span> 4,8 / 5</p>
+                        <p>Fritas douradas e refrigerante geladinho. Simples assim, bom demais.</p>
+
+                        <div class="ingredientes">
+                            <h3>Ingredientes</h3>
+                            <ul>
+                                <li>Batata frita de 150 g</li>
+                                <li>Óleo vegetal e sal</li>
+                                <li>Refrigerante de cola de 350 ml</li>
+                            </ul>
+                            <p>Porção individual, conforme os ingredientes acima. Sem adicionais.</p>
+                        </div>
+
+                        <div class="baixo">
+                            <strong class="preco">R$ 12,90</strong>
+                            <label>Quantidade
+                                <input class="quantidade" type="number" min="1" max="10" value="1" inputmode="numeric">
+                            </label>
+                        </div>
+
+                        <button class="botao guardar" type="button">Adicionar ao carrinho <span class="icone mais branca" aria-hidden="true"></span></button>
+                    </div>
+                </article>
+
+                <article id="pedido-8" class="pedido" data-id="8" data-nome="Molhos especiais" data-preco="490" data-imagem="molhos" hidden>
+                    <div class="imagem molhos" role="img" aria-label="Molhos especiais"></div>
+
+                    <div class="texto">
+                        <h2>Molhos especiais</h2>
+                        <p class="avaliacao"><span class="icone estrela" aria-hidden="true"></span> 4,7 / 5</p>
+                        <p>Três molhinhos para completar a mordida: maionese, cheddar e ketchup.</p>
+
+                        <div class="ingredientes">
+                            <h3>Ingredientes</h3>
+                            <ul>
+                                <li>Maionese de 30 g (óleo, ovos, limão e sal)</li>
+                                <li>Creme de cheddar de 30 g (queijo cheddar, leite e creme de leite)</li>
+                                <li>Ketchup de 30 g (tomate, açúcar, vinagre e sal)</li>
+                            </ul>
+                            <p>Porção individual, conforme os ingredientes acima. Sem adicionais.</p>
+                        </div>
+
+                        <div class="baixo">
+                            <strong class="preco">R$ 4,90</strong>
+                            <label>Quantidade
+                                <input class="quantidade" type="number" min="1" max="10" value="1" inputmode="numeric">
+                            </label>
+                        </div>
+
+                        <button class="botao guardar" type="button">Adicionar ao carrinho <span class="icone mais branca" aria-hidden="true"></span></button>
+                    </div>
+                </article>
+
+                <article id="pedido-9" class="pedido" data-id="9" data-nome="Brownie com Sorvete" data-preco="1690" data-imagem="brownie" hidden>
+                    <div class="imagem brownie" role="img" aria-label="Brownie com Sorvete"></div>
+
+                    <div class="texto">
+                        <h2>Brownie com Sorvete</h2>
+                        <p class="avaliacao"><span class="icone estrela" aria-hidden="true"></span> 4,9 / 5</p>
+                        <p>Brownie de chocolate, sorvete de baunilha e calda. Vale guardar um espacinho.</p>
+
+                        <div class="ingredientes">
+                            <h3>Ingredientes</h3>
+                            <ul>
+                                <li>Brownie de 80 g (chocolate, manteiga, açúcar, ovos e farinha de trigo)</li>
+                                <li>Sorvete de baunilha de 60 g (leite, creme de leite, açúcar e baunilha)</li>
+                                <li>Calda de chocolate</li>
+                            </ul>
+                            <p>Porção individual, conforme os ingredientes acima. Sem adicionais.</p>
+                        </div>
+
+                        <div class="baixo">
+                            <strong class="preco">R$ 16,90</strong>
+                            <label>Quantidade
+                                <input class="quantidade" type="number" min="1" max="10" value="1" inputmode="numeric">
+                            </label>
+                        </div>
+
+                        <button class="botao guardar" type="button">Adicionar ao carrinho <span class="icone mais branca" aria-hidden="true"></span></button>
+                    </div>
+                </article>
+
+                <div id="lista-pedidos"></div>
+
+                <template id="modelo-pedido">
+                    <article class="resumo-pedido">
+                        <h2>Pedido <span class="numero"></span></h2>
+                        <ul class="itens"></ul>
+                        <p class="total">Total <strong></strong></p>
+                    </article>
+                </template>
+            </section>
+        </main>
+
+        <footer>
+            <div class="largura">
+                <div id="marca">
+                    <a class="logo" href="index.html" aria-label="RedBurguer - Início"></a>
+                    <p>Mais que um lanche,<br>um bom momento.</p>
+                </div>
+
+                <div id="paginas">
+                    <h3>Explore</h3>
+                    <a href="produtos.html">Produtos</a>
+                    <a href="pedidos.html">Meus pedidos</a>
+                    <a href="carrinho.html">Carrinho</a>
+                </div>
+
+                <div id="sobre">
+                    <h3>Feito para aproximar.</h3>
+                    <p>Burgers no capricho, ingredientes frescos e aquele sabor que dá vontade de repetir.</p>
+                </div>
+            </div>
+
+            <p id="direitos">RedBurguer. Sabor que reúne.</p>
+        </footer>
+
+        <script src="js/tema.js"></script>
+        <script src="js/login.js"></script>
+        <script src="js/menu.js"></script>
+        <script src="js/pedidos.js"></script>
+    </body>
+</html>

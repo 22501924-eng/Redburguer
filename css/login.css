@@ -1,0 +1,137 @@
+/* Tela de login e cadastro */
+#principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+    padding-top: 60px;
+
+    /* Apresentação */
+    #esquerda {
+        width: 45%;
+        max-width: 450px;
+
+        h1 {
+            font-size: clamp(36px, 4vw, 54px);
+        }
+        h1 span {
+            color: var(--destaque);
+        }
+        > p:last-of-type {
+            margin-top: 20px;
+        }
+        .imagem {
+            width: 260px;
+            height: 230px;
+            background-image: url(../imagens/perfil-mascote.png);
+            background-size: contain;
+            margin-top: 20px;
+        }
+    }
+
+    /* Formulário de acesso */
+    #direita {
+        width: 460px;
+        max-width: 100%;
+        padding: 32px;
+        background-color: var(--papel);
+        border: 1px solid var(--linha);
+        border-radius: 18px;
+
+        #abas {
+            display: flex;
+            border-bottom: 1px solid var(--linha);
+            margin-bottom: 28px;
+
+            a {
+                flex: 1;
+                padding: 0 0 15px;
+                text-align: center;
+                font-weight: 600;
+            }
+            .ativo {
+                border-bottom: 2px solid #e90b20;
+                color: var(--destaque);
+            }
+        }
+
+        h2 {
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+        > p {
+            font-size: 13px;
+        }
+
+        form {
+            margin-top: 25px;
+
+            .senha {
+                display: flex;
+                border: 1px solid var(--linha);
+                background-color: var(--fundo);
+                border-radius: 8px;
+
+                input {
+                    border: 0;
+                    background: none;
+                }
+                button {
+                    flex-shrink: 0;
+                    width: 45px;
+                    background: none;
+                    border: 0;
+                }
+            }
+
+            .botao {
+                width: 100%;
+                margin-top: 5px;
+            }
+            #mensagem {
+                margin-bottom: 15px;
+                color: var(--destaque);
+                font-size: 13px;
+            }
+        }
+
+        #trocar-conta {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 12px;
+        }
+        #trocar-conta a {
+            color: var(--destaque);
+            font-weight: 600;
+        }
+    }
+}
+
+/* Espaçamento em telas menores */
+@media (max-width: 850px) {
+    #principal {
+        gap: 35px;
+    }
+}
+
+/* Login e cadastro no celular */
+@media (max-width: 650px) {
+    #principal {
+        flex-direction: column;
+        padding-top: 35px;
+
+        #esquerda {
+            width: 100%;
+            max-width: none;
+        }
+        #esquerda h1 {
+            font-size: 35px;
+        }
+        #esquerda .imagem {
+            display: none;
+        }
+        #direita {
+            padding: 25px;
+        }
+    }
+}

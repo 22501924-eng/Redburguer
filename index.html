@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="RedBurguer: burgers artesanais, combos e bons momentos.">
+        <title>Deu fome? Deu RedBurguer | RedBurguer</title>
+
+        <link rel="icon" href="imagens/burger.svg" type="image/svg+xml">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/cardapio.css">
+        <link rel="stylesheet" href="css/inicio.css">
+    </head>
+
+    <body class="claro">
+        <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+        <header>
+            <div class="largura">
+                <a class="logo" href="index.html" aria-label="RedBurguer - Início"></a>
+
+                <button id="abrir-menu" type="button" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">
+                    <span class="icone menu" aria-hidden="true"></span>
+                </button>
+
+                <nav id="menu" aria-label="Menu principal">
+                    <ul>
+                        <li><a href="index.html" class="ativo" aria-current="page">Início</a></li>
+
+                        <li><a href="produtos.html">Produtos</a></li>
+
+                        <li><a href="pedidos.html">Pedidos</a></li>
+
+                        <li><a href="carrinho.html">Carrinho</a></li>
+
+                        <li><a href="perfil.html">Perfil</a></li>
+                    </ul>
+
+                    <div id="conta">
+                        <a class="botao borda" href="login.html">Entrar</a>
+                        <a class="botao" href="cadastro.html">Cadastrar</a>
+                    </div>
+                </nav>
+
+                <button id="trocar-tema" type="button" aria-label="Ativar modo escuro" aria-pressed="false">
+                    <span class="icone lua" aria-hidden="true"></span>
+                </button>
+            </div>
+        </header>
+
+        <main id="conteudo">
+            <section id="principal">
+                <div class="largura">
+                    <div id="esquerda">
+                        <p class="subtitulo">NA CHAPA. NO CAPRICHO.</p>
+                        <h1>Deu fome?<br><span>Deu RedBurguer.</span></h1>
+                        <p>Pão macio, carne suculenta e queijo derretendo. Agora só falta escolher o seu.</p>
+                        <a class="botao" href="produtos.html">Bora escolher o meu <span class="icone seta branca" aria-hidden="true"></span></a>
+
+                        <div id="vantagens">
+                            <p><span class="icone entrega" aria-hidden="true"></span> Entrega rápida</p>
+                            <p><span class="icone burger" aria-hidden="true"></span> Burger artesanal</p>
+                        </div>
+                    </div>
+
+                    <div id="direita">
+                        <div class="imagem" role="img" aria-label="Hambúrguer artesanal com fritas e refrigerante"></div>
+                        <div class="adesivo">FEITO PRA<br><strong>DAR FOME!</strong></div>
+                    </div>
+                </div>
+            </section>
+
+            <div id="faixa">PÃO MACIO <span>+</span> CARNE NA CHAPA <span>+</span> QUEIJO DERRETIDO</div>
+
+            <section id="combos" class="largura">
+                <div class="titulo">
+                    <div>
+                        <p class="subtitulo">ESCOLHA SUA PRÓXIMA MORDIDA</p>
+                        <h2>Difícil é escolher um só.</h2>
+                    </div>
+                    <a href="produtos.html">Ver cardápio <span class="icone seta" aria-hidden="true"></span></a>
+                </div>
+
+                <div class="lista">
+                    <article class="produto" data-categoria="classicos">
+                        <div class="imagem combo-classic" role="img" aria-label="Combo Red Classic">
+                            <span class="selo">O clássico</span>
+                        </div>
+
+                        <div class="texto">
+                            <h3>Combo Red Classic</h3>
+                            <p>Carne na chapa, cheddar e salada fresquinha. Acompanha fritas e refri.</p>
+
+                            <div class="baixo">
+                                <strong class="preco"><small>R$</small> 29,90</strong>
+                                <a class="adicionar" href="pedidos.html?produto=1" aria-label="Escolher Combo Red Classic">
+                                    <span class="icone mais" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="produto" data-categoria="bacon">
+                        <div class="imagem combo-bacon" role="img" aria-label="Combo Bacon Lovers">
+                            <span class="selo">Bacon de sobra</span>
+                        </div>
+
+                        <div class="texto">
+                            <h3>Combo Bacon Lovers</h3>
+                            <p>Bacon douradinho, cheddar e molho da casa. Acompanha fritas e refri.</p>
+
+                            <div class="baixo">
+                                <strong class="preco"><small>R$</small> 34,90</strong>
+                                <a class="adicionar" href="pedidos.html?produto=2" aria-label="Escolher Combo Bacon Lovers">
+                                    <span class="icone mais" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="produto" data-categoria="duplo">
+                        <div class="imagem combo-cheddar" role="img" aria-label="Combo Cheddar Supreme">
+                            <span class="selo">Duplo cheddar</span>
+                        </div>
+
+                        <div class="texto">
+                            <h3>Combo Cheddar Supreme</h3>
+                            <p>Duas carnes e cheddar derretendo. Acompanha fritas e refri.</p>
+
+                            <div class="baixo">
+                                <strong class="preco"><small>R$</small> 37,90</strong>
+                                <a class="adicionar" href="pedidos.html?produto=3" aria-label="Escolher Combo Cheddar Supreme">
+                                    <span class="icone mais" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section id="chamada" class="largura">
+                <div id="texto">
+                    <p class="subtitulo">SEU PRÓXIMO FAVORITO ESTÁ AQUI</p>
+                    <h2>Capricho na chapa.<br>Felicidade na mesa.</h2>
+                    <a class="botao amarelo" href="produtos.html">Explorar o cardápio <span class="icone seta" aria-hidden="true"></span></a>
+                </div>
+
+                <div class="imagem" role="img" aria-label="Mascote RedBurguer"></div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="largura">
+                <div id="marca">
+                    <a class="logo" href="index.html" aria-label="RedBurguer - Início"></a>
+                    <p>Mais que um lanche,<br>um bom momento.</p>
+                </div>
+
+                <div id="paginas">
+                    <h3>Explore</h3>
+                    <a href="produtos.html">Produtos</a>
+                    <a href="pedidos.html">Meus pedidos</a>
+                    <a href="carrinho.html">Carrinho</a>
+                </div>
+
+                <div id="sobre">
+                    <h3>Feito para aproximar.</h3>
+                    <p>Burgers no capricho, ingredientes frescos e aquele sabor que dá vontade de repetir.</p>
+                </div>
+            </div>
+
+            <p id="direitos">RedBurguer. Sabor que reúne.</p>
+        </footer>
+
+        <script src="js/tema.js"></script>
+        <script src="js/login.js"></script>
+        <script src="js/menu.js"></script>
+    </body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="RedBurguer: burgers artesanais, combos e bons momentos.">
+        <title>Produtos | RedBurguer</title>
+
+        <link rel="icon" href="imagens/burger.svg" type="image/svg+xml">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/cardapio.css">
+        <link rel="stylesheet" href="css/produtos.css">
+    </head>
+
+    <body class="claro">
+        <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+        <header>
+            <div class="largura">
+                <a class="logo" href="index.html" aria-label="RedBurguer - Início"></a>
+
+                <button id="abrir-menu" type="button" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">
+                    <span class="icone menu" aria-hidden="true"></span>
+                </button>
+
+                <nav id="menu" aria-label="Menu principal">
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+
+                        <li><a href="produtos.html" class="ativo" aria-current="page">Produtos</a></li>
+
+                        <li><a href="pedidos.html">Pedidos</a></li>
+
+                        <li><a href="carrinho.html">Carrinho</a></li>
+
+                        <li><a href="perfil.html">Perfil</a></li>
+                    </ul>
+
+                    <div id="conta">
+                        <a class="botao borda" href="login.html">Entrar</a>
+                        <a class="botao" href="cadastro.html">Cadastrar</a>
+                    </div>
+                </nav>
+
+                <button id="trocar-tema" type="button" aria-label="Ativar modo escuro" aria-pressed="false">
+                    <span class="icone lua" aria-hidden="true"></span>
+                </button>
+            </div>
+        </header>
+
+        <main id="conteudo">
+            <section id="principal">
+                <div class="largura">
+                    <p class="subtitulo">DO PRIMEIRO AO ÚLTIMO PEDAÇO</p>
+                    <h1>Escolha sua<br>próxima mordida.</h1>
+                    <p>Tem um favorito esperando por você.</p>
+                </div>
+            </section>
+
+            <section id="cardapio" class="largura">
+                <div class="titulo">
+                    <h2>Nosso cardápio</h2>
+
+                    <div id="busca">
+                        <label for="buscar-produto" class="sr">Buscar produto</label>
+                        <span class="icone busca" aria-hidden="true"></span>
+                        <input id="buscar-produto" type="search" placeholder="O que bateu vontade?">
+                    </div>
+                </div>
+
+                <div id="categorias" aria-label="Categorias">
+                    <button type="button" data-categoria="todos" class="ativo" aria-pressed="true">Todos</button>
+                    <button type="button" data-categoria="classicos" aria-pressed="false">Clássicos</button>
+                    <button type="button" data-categoria="bacon" aria-pressed="false">Bacon</button>
+                    <button type="button" data-categoria="duplo" aria-pressed="false">Duplos</button>
+                    <button type="button" data-categoria="frango" aria-pressed="false">Frango</button>
+                    <button type="button" data-categoria="acompanhamentos" aria-pressed="false">Acompanhamentos</button>
+                    <button type="button" data-categoria="doces" aria-pressed="false">Doces</button>
+                </div>
+
+                <p id="sem-produtos" hidden>Nenhum produto encontrado.</p>
+
+                <div class="lista">
+                    <article class="produto" data-categoria="classicos">
+                        <div class="imagem combo-classic" role="img" aria-label="Combo Red Classic">
+                            <span class="selo">O clássico</span>
+                        </div>
+
+                        <div class="texto">
+                            <h3>Combo Red Classic</h3>
+                            <p>Carne na chapa, cheddar e salada fresquinha. Acompanha fritas e refri.</p>
+
+                            <div class="baixo">
+                                <strong class="preco"><small>R$</small> 29,90</strong>
+                                <a class="adicionar" href="pedidos.html?produto=1" aria-label="Escolher Combo Red Classic">
+                                    <span class="icone mais" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="produto" data-categoria="bacon">
+                        <div class="imagem combo-bacon" role="img" aria-label="Combo Bacon Lovers">
+                            <span class="selo">Bacon de sobra</span>
+                        </div>
+
+                        <div class="texto">
+                            <h3>Combo Bacon Lovers</h3>
+                            <p>Bacon douradinho, cheddar e molho da casa. Acompanha fritas e refri.</p>
+
+                            <div class="baixo">
+                                <strong class="preco"><small>R$</small> 34,90</strong>
+                                <a class="adicionar" href="pedidos.html?produto=2" aria-label="Escolher Combo Bacon Lovers">
+                                    <span class="icone mais" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="produto" data-categoria="duplo">
+                        <div class="imagem combo-cheddar" role="img" aria-label="Combo Cheddar Supreme">
+                            <span class="selo">Duplo cheddar</span>
+                        </div>
+
+                        <div class="texto">
+                            <h3>Combo Cheddar Supreme</h3>
+                            <p>Duas carnes e cheddar derretendo. Acompanha fritas e refri.</p>
+
+                            <div class="baixo">
+                                <strong class="preco"><small>R$</small> 37,90</strong>
+                                <a class="adicionar" href="pedidos.html?produto=3" aria-label="Escolher Combo Cheddar Supreme">
+                                    <span class="icone mais" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="produto" data-categoria="frango">
+                        <div class="imagem combo-frango" role="img" aria-label="Combo Crispy Chicken">
+                            <span class="selo">Crocância de respeito</span>
+                        </div>
+
+                        <div class="texto">
+                            <h3>Combo Crispy Chicken</h3>
+                            <p>Frango empanado, salada fresquinha e maionese. Com fritas e refri.</p>
+
+                            <div class="baixo">
+                                <strong class="preco"><small>R$</small> 27,90</strong>
+                                <a class="adicionar" href="pedidos.html?produto=4" aria-label="Escolher Combo Crispy Chicken">
+                                    <span class="icone mais" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="produto" data-categoria="acompanhamentos">
+                        <div class="imagem combo-onion" role="img" aria-label="Combo Onion Rings">
+                            <span class="selo">Pra compartilhar</span>
+                        </div>
+
+                        <div class="texto">
+                            <h3>Combo Onion Rings</h3>
+                            <p>Anéis de cebola douradinhos, fritas, molho da casa e refri.</p>
+
+                            <div class="baixo">
+                                <strong class="preco"><small>R$</small> 24,90</strong>
+                                <a class="adicionar" href="pedidos.html?produto=5" aria-label="Escolher Combo Onion Rings">
+                                    <span class="icone mais" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="produto" data-categoria="doces">
+                        <div class="imagem combo-doce" role="img" aria-label="Combo Sweet Burger">
+                            <span class="selo">Doce surpresa</span>
+                        </div>
+
+                        <div class="texto">
+                            <h3>Combo Sweet Burger</h3>
+                            <p>Brioche com chocolate e morangos. Um final feliz com fritas e refri.</p>
+
+                            <div class="baixo">
+                                <strong class="preco"><small>R$</small> 26,90</strong>
+                                <a class="adicionar" href="pedidos.html?produto=6" aria-label="Escolher Combo Sweet Burger">
+                                    <span class="icone mais" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="produto" data-categoria="acompanhamentos">
+                        <div class="imagem batata" role="img" aria-label="Batata + Refri">
+                            <span class="selo">Dupla perfeita</span>
+                        </div>
+
+                        <div class="texto">
+                            <h3>Batata + Refri</h3>
+                            <p>Fritas douradas e refrigerante geladinho. A dupla que vai com tudo.</p>
+
+                            <div class="baixo">
+                                <strong class="preco"><small>R$</small> 12,90</strong>
+                                <a class="adicionar" href="pedidos.html?produto=7" aria-label="Escolher Batata + Refri">
+                                    <span class="icone mais" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="produto" data-categoria="acompanhamentos">
+                        <div class="imagem molhos" role="img" aria-label="Molhos especiais">
+                            <span class="selo">Mais sabor</span>
+                        </div>
+
+                        <div class="texto">
+                            <h3>Molhos especiais</h3>
+                            <p>Maionese, cheddar e ketchup para dar ainda mais sabor.</p>
+
+                            <div class="baixo">
+                                <strong class="preco"><small>R$</small> 4,90</strong>
+                                <a class="adicionar" href="pedidos.html?produto=8" aria-label="Escolher Molhos especiais">
+                                    <span class="icone mais" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="produto" data-categoria="doces">
+                        <div class="imagem brownie" role="img" aria-label="Brownie com Sorvete">
+                            <span class="selo">Final feliz</span>
+                        </div>
+
+                        <div class="texto">
+                            <h3>Brownie com Sorvete</h3>
+                            <p>Brownie de chocolate, sorvete de baunilha e calda.</p>
+
+                            <div class="baixo">
+                                <strong class="preco"><small>R$</small> 16,90</strong>
+                                <a class="adicionar" href="pedidos.html?produto=9" aria-label="Escolher Brownie com Sorvete">
+                                    <span class="icone mais" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="largura">
+                <div id="marca">
+                    <a class="logo" href="index.html" aria-label="RedBurguer - Início"></a>
+                    <p>Mais que um lanche,<br>um bom momento.</p>
+                </div>
+
+                <div id="paginas">
+                    <h3>Explore</h3>
+                    <a href="produtos.html">Produtos</a>
+                    <a href="pedidos.html">Meus pedidos</a>
+                    <a href="carrinho.html">Carrinho</a>
+                </div>
+
+                <div id="sobre">
+                    <h3>Feito para aproximar.</h3>
+                    <p>Burgers no capricho, ingredientes frescos e aquele sabor que dá vontade de repetir.</p>
+                </div>
+            </div>
+
+            <p id="direitos">RedBurguer. Sabor que reúne.</p>
+        </footer>
+
+        <script src="js/tema.js"></script>
+        <script src="js/login.js"></script>
+        <script src="js/menu.js"></script>
+        <script src="js/produtos.js"></script>
+    </body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="RedBurguer: burgers artesanais, combos e bons momentos.">
+        <title>Meu carrinho | RedBurguer</title>
+
+        <link rel="icon" href="imagens/burger.svg" type="image/svg+xml">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/carrinho.css">
+    </head>
+
+    <body class="claro">
+        <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+        <header>
+            <div class="largura">
+                <a class="logo" href="index.html" aria-label="RedBurguer - Início"></a>
+
+                <button id="abrir-menu" type="button" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">
+                    <span class="icone menu" aria-hidden="true"></span>
+                </button>
+
+                <nav id="menu" aria-label="Menu principal">
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+
+                        <li><a href="produtos.html">Produtos</a></li>
+
+                        <li><a href="pedidos.html">Pedidos</a></li>
+
+                        <li><a href="carrinho.html" class="ativo" aria-current="page">Carrinho</a></li>
+
+                        <li><a href="perfil.html">Perfil</a></li>
+                    </ul>
+
+                    <div id="conta">
+                        <a class="botao borda" href="login.html">Entrar</a>
+                        <a class="botao" href="cadastro.html">Cadastrar</a>
+                    </div>
+                </nav>
+
+                <button id="trocar-tema" type="button" aria-label="Ativar modo escuro" aria-pressed="false">
+                    <span class="icone lua" aria-hidden="true"></span>
+                </button>
+            </div>
+        </header>
+
+        <main id="conteudo">
+            <section id="carrinho" class="largura">
+                <div class="titulo">
+                    <h1>Meu carrinho</h1>
+                    <a href="produtos.html">Continuar escolhendo <span class="icone seta" aria-hidden="true"></span></a>
+                </div>
+
+                <div id="conteudo-carrinho">
+                    <div id="esquerda">
+                        <div id="sem-itens" class="vazio">
+                            <span class="icone sacola" aria-hidden="true"></span>
+                            <h2>A fome já chegou.<br>Só falta o combo!</h2>
+                            <p>Seu carrinho está esperando seu favorito.</p>
+                            <a class="botao" href="produtos.html">Ver produtos</a>
+                        </div>
+
+                        <div id="lista-carrinho"></div>
+
+                        <template id="modelo-item">
+                            <article class="item">
+                                <div class="imagem" role="img"></div>
+
+                                <div class="texto">
+                                    <h2 class="nome"></h2>
+                                    <p class="preco"></p>
+                                    <label>Quantidade
+                                        <input class="quantidade" type="number" min="1" max="10" value="1" inputmode="numeric">
+                                    </label>
+                                    <button class="remover" type="button">Remover</button>
+                                </div>
+
+                                <strong class="subtotal-item"></strong>
+                            </article>
+                        </template>
+                    </div>
+
+                    <aside id="resumo" aria-labelledby="titulo-resumo">
+                        <h2 id="titulo-resumo">Seu pedido</h2>
+                        <p>Subtotal <span id="subtotal">R$ 0,00</span></p>
+                        <p>Entrega <span id="entrega">Grátis</span></p>
+                        <p id="total">Total <strong>R$ 0,00</strong></p>
+                        <p id="mensagem-carrinho" role="status" hidden></p>
+                        <button id="finalizar" class="botao" type="button" disabled>Finalizar pedido</button>
+                    </aside>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="largura">
+                <div id="marca">
+                    <a class="logo" href="index.html" aria-label="RedBurguer - Início"></a>
+                    <p>Mais que um lanche,<br>um bom momento.</p>
+                </div>
+
+                <div id="paginas">
+                    <h3>Explore</h3>
+                    <a href="produtos.html">Produtos</a>
+                    <a href="pedidos.html">Meus pedidos</a>
+                    <a href="carrinho.html">Carrinho</a>
+                </div>
+
+                <div id="sobre">
+                    <h3>Feito para aproximar.</h3>
+                    <p>Burgers no capricho, ingredientes frescos e aquele sabor que dá vontade de repetir.</p>
+                </div>
+            </div>
+
+            <p id="direitos">RedBurguer. Sabor que reúne.</p>
+        </footer>
+
+        <script src="js/tema.js"></script>
+        <script src="js/login.js"></script>
+        <script src="js/menu.js"></script>
+        <script src="js/carrinho.js"></script>
+    </body>
+</html>

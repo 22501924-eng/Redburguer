@@ -1,0 +1,129 @@
+/* Tela de pedidos */
+#pedidos {
+    padding-top: 55px;
+    min-height: 65vh;
+
+    /* Produto selecionado */
+    .pedido {
+        display: grid;
+        grid-template-columns: 1fr 1.1fr;
+        overflow: hidden;
+        border: 1px solid var(--linha);
+        border-radius: 20px;
+        background-color: var(--papel);
+        margin-bottom: 30px;
+
+        > .imagem {
+            min-height: 390px;
+            background-size: contain;
+            background-color: #eee;
+        }
+
+        .texto {
+            padding: 35px;
+
+            h2 {
+                font-size: 29px;
+                margin-bottom: 12px;
+            }
+            .avaliacao {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                margin-bottom: 12px;
+                color: var(--texto);
+                font-weight: 600;
+            }
+
+            .ingredientes {
+                margin: 24px 0;
+                padding: 20px 0;
+                border-top: 1px solid var(--linha);
+                border-bottom: 1px solid var(--linha);
+
+                h3 {
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 17px;
+                    margin-bottom: 12px;
+                }
+                ul {
+                    margin-left: 20px;
+                    color: var(--suave);
+                    font-size: 14px;
+                }
+                p {
+                    margin-top: 15px;
+                    font-size: 14px;
+                }
+            }
+
+            .baixo {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 15px;
+                margin-bottom: 25px;
+
+                label {
+                    font-size: 12px;
+                }
+                input {
+                    display: block;
+                    width: 75px;
+                    padding: 6px 10px;
+                    border: 1px solid var(--linha);
+                    border-radius: 7px;
+                    background-color: var(--fundo);
+                    color: var(--texto);
+                }
+            }
+        }
+    }
+
+    /* Histórico de pedidos */
+    .resumo-pedido {
+        padding: 30px;
+        margin-bottom: 20px;
+        background-color: var(--papel);
+        border: 1px solid var(--linha);
+        border-radius: 16px;
+
+        h2 {
+            font-size: 23px;
+            margin-bottom: 18px;
+        }
+        ul {
+            list-style: none;
+        }
+        li {
+            padding: 8px 0;
+        }
+        .total {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--linha);
+            color: var(--destaque);
+            font-size: 23px;
+            font-weight: 700;
+        }
+    }
+}
+
+/* Pedidos em telas menores */
+@media (max-width: 800px) {
+    #pedidos {
+        .pedido {
+            grid-template-columns: 1fr;
+        }
+        .pedido > .imagem {
+            min-height: 0;
+            aspect-ratio: 1.5;
+            background-size: cover;
+        }
+        .pedido .texto {
+            padding: 25px;
+        }
+    }
+}

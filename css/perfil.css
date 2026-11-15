@@ -1,0 +1,181 @@
+/* Tela do perfil */
+#perfil {
+    padding-top: 55px;
+
+    #colunas {
+        display: grid;
+        grid-template-columns: 245px 1fr;
+        gap: 30px;
+        align-items: start;
+    }
+
+    /* Menu do perfil */
+    #esquerda {
+        background-color: var(--apoio);
+        border-radius: 16px;
+        padding: 28px 20px;
+
+        .avatar {
+            width: 85px;
+            height: 85px;
+            background-image: url(../imagens/avatar.svg);
+            background-size: contain;
+            margin: 0 auto 18px;
+        }
+        h2 {
+            text-align: center;
+            font-size: 21px;
+            margin-bottom: 30px;
+            overflow-wrap: anywhere;
+        }
+        a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 13px 8px;
+        }
+        a:hover {
+            color: var(--destaque);
+        }
+    }
+
+    /* Seções do perfil */
+    #direita {
+        min-width: 0;
+
+        section {
+            padding: 28px;
+            background-color: var(--papel);
+            border: 1px solid var(--linha);
+            border-radius: 16px;
+            margin-bottom: 25px;
+            scroll-margin-top: 20px;
+        }
+        h2 {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 23px;
+            margin-bottom: 25px;
+        }
+        .linha {
+            display: flex;
+            gap: 20px;
+        }
+        .linha .campo {
+            flex: 1;
+            min-width: 0;
+        }
+
+        /* Dados pessoais */
+        #dados {
+            .campo {
+                max-width: 640px;
+            }
+            #mensagem-perfil {
+                margin-top: 18px;
+                color: var(--destaque);
+                font-size: 13px;
+            }
+        }
+
+        /* Endereço */
+        #endereco {
+            .topo {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 18px;
+            }
+            .topo h2 {
+                margin-bottom: 0;
+            }
+            #abrir-endereco {
+                display: flex;
+                align-items: center;
+                gap: 7px;
+                border: 0;
+                background: none;
+                color: var(--destaque);
+                font-size: 13px;
+                font-weight: 600;
+            }
+            #endereco-salvo {
+                margin-top: 20px;
+                padding: 18px;
+                background-color: var(--fundo);
+                border-radius: 10px;
+                overflow-wrap: anywhere;
+            }
+            #mensagem-endereco {
+                margin-top: 18px;
+                color: var(--destaque);
+                font-size: 13px;
+            }
+            form {
+                margin-top: 28px;
+            }
+            .acoes {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+        }
+
+        /* Preferências */
+        #preferencias {
+            .linha {
+                align-items: center;
+                justify-content: space-between;
+            }
+            #tema-perfil {
+                display: flex;
+                align-items: center;
+                padding: 4px;
+                width: 50px;
+                height: 29px;
+                background-color: #929093;
+                border: 0;
+                border-radius: 20px;
+            }
+            #tema-perfil span {
+                display: block;
+                width: 21px;
+                height: 21px;
+                background-color: white;
+                border-radius: 50%;
+            }
+            #tema-perfil[aria-checked="true"] {
+                justify-content: flex-end;
+                background-color: #e90b20;
+            }
+        }
+    }
+}
+
+/* Perfil em uma coluna */
+@media (max-width: 850px) {
+    #perfil #colunas {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Formulários no celular */
+@media (max-width: 550px) {
+    #perfil #direita {
+        section {
+            padding: 22px;
+        }
+        .linha {
+            flex-direction: column;
+            gap: 0;
+        }
+        #endereco .topo {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        #preferencias .linha {
+            flex-direction: row;
+        }
+    }
+}

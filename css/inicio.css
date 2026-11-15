@@ -1,0 +1,179 @@
+/* Seção principal */
+#principal {
+    background-image: linear-gradient(90deg, var(--fundo) 15%, transparent 110%), url(../imagens/restaurante.png);
+    background-size: cover;
+    background-position: center;
+
+    .largura {
+        display: flex;
+        align-items: center;
+        min-height: 650px;
+        gap: 20px;
+    }
+
+    #esquerda {
+        width: 52%;
+        padding: 70px 0;
+
+        h1 {
+            font-size: clamp(42px, 4.6vw, 67px);
+            line-height: 1.05;
+            letter-spacing: -2px;
+        }
+        h1 span {
+            color: var(--destaque);
+        }
+        > p:not(.subtitulo) {
+            max-width: 510px;
+            font-size: 17px;
+            margin: 25px 0;
+        }
+        .botao {
+            margin-top: 8px;
+        }
+
+        #vantagens {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 22px;
+            margin-top: 35px;
+
+            p {
+                color: var(--texto);
+                font-size: 13px;
+                font-weight: 600;
+            }
+            .icone {
+                margin-right: 6px;
+            }
+        }
+    }
+
+    #direita {
+        position: relative;
+        width: 48%;
+
+        .imagem {
+            height: 560px;
+            background-image: url(../imagens/mascote-principal.png);
+            background-size: contain;
+        }
+        .adesivo {
+            position: absolute;
+            top: 12px;
+            right: 4%;
+            padding: 20px;
+            border-radius: 50%;
+            background-color: #ffc344;
+            color: #291a14;
+            border: 2px solid #291a14;
+            transform: rotate(10deg);
+            text-align: center;
+            font-size: 12px;
+        }
+        strong {
+            font-size: 18px;
+        }
+    }
+}
+
+/* Seção principal em telas menores */
+@media (max-width: 850px) {
+    #principal {
+        .largura {
+            flex-direction: column;
+            gap: 0;
+        }
+        #esquerda {
+            width: 100%;
+            padding: 55px 0 20px;
+        }
+        #direita {
+            width: 100%;
+            max-width: 520px;
+        }
+        #direita .imagem {
+            height: 370px;
+        }
+        #direita .adesivo {
+            right: 0;
+        }
+    }
+}
+
+/* Faixa de destaque */
+#faixa {
+    padding: 17px 20px;
+    background-color: #e90b20;
+    color: #fff;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(12px, 1.7vw, 21px);
+    font-weight: 800;
+
+    span {
+        margin: 0 24px;
+        color: #ffc344;
+    }
+}
+
+/* Faixa no celular */
+@media (max-width: 600px) {
+    #faixa {
+        font-size: 10px;
+        padding: 15px 8px;
+    }
+    #faixa span {
+        margin: 0 5px;
+    }
+}
+
+/* Combos em destaque */
+#combos {
+    padding-top: 75px;
+}
+
+/* Chamada para o cardápio */
+#chamada {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    margin-top: 75px;
+    padding: 45px 60px;
+    background-color: #d80a1e;
+    background-image: url(../imagens/padrao-burger.svg);
+    border-radius: 22px;
+    color: #fff;
+
+    #texto {
+        .subtitulo {
+            color: #ffe2a0;
+        }
+        h2 {
+            margin-bottom: 25px;
+        }
+    }
+
+    .imagem {
+        width: 270px;
+        height: 270px;
+        flex-shrink: 0;
+        background-image: url(../imagens/perfil-mascote.png);
+        background-size: contain;
+    }
+}
+
+/* Chamada no celular */
+@media (max-width: 700px) {
+    #chamada {
+        padding: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #chamada .imagem {
+        align-self: center;
+        width: 220px;
+        height: 200px;
+    }
+}

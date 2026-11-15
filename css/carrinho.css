@@ -1,0 +1,139 @@
+/* Tela do carrinho */
+#carrinho {
+    padding-top: 55px;
+    min-height: 65vh;
+
+    #conteudo-carrinho {
+        display: grid;
+        grid-template-columns: 1fr 350px;
+        align-items: start;
+        gap: 30px;
+    }
+
+    /* Itens do carrinho */
+    #esquerda {
+        min-width: 0;
+
+        .item {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            margin-bottom: 18px;
+            padding: 22px;
+            border: 1px solid var(--linha);
+            border-radius: 16px;
+            background-color: var(--papel);
+
+            .imagem {
+                width: 135px;
+                height: 120px;
+                flex-shrink: 0;
+                border-radius: 10px;
+            }
+
+            .texto {
+                flex: 1;
+
+                h2 {
+                    font-size: 19px;
+                    margin-bottom: 8px;
+                }
+                .preco {
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+                label {
+                    display: block;
+                    font-size: 12px;
+                    margin-top: 12px;
+                }
+                input {
+                    width: 65px;
+                    padding: 5px;
+                    margin-left: 5px;
+                    color: var(--texto);
+                    background-color: var(--fundo);
+                    border: 1px solid var(--linha);
+                    border-radius: 5px;
+                }
+                .remover {
+                    border: 0;
+                    background: none;
+                    color: var(--destaque);
+                    margin-top: 10px;
+                    font-size: 13px;
+                    text-decoration: underline;
+                }
+            }
+
+            .subtotal-item {
+                color: var(--destaque);
+                white-space: nowrap;
+            }
+        }
+    }
+
+    /* Resumo do pedido */
+    #resumo {
+        padding: 28px;
+        background-color: var(--papel);
+        border: 1px solid var(--linha);
+        border-top: 5px solid #e90b20;
+        border-radius: 16px;
+
+        h2 {
+            font-size: 25px;
+            margin-bottom: 25px;
+        }
+        p {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            margin: 15px 0;
+        }
+        #total {
+            border-top: 1px solid var(--linha);
+            padding-top: 22px;
+            color: var(--destaque);
+            font-size: 24px;
+            font-weight: 700;
+        }
+        .botao {
+            width: 100%;
+            margin-top: 15px;
+        }
+        #mensagem-carrinho {
+            display: block;
+            color: var(--destaque);
+            font-size: 13px;
+        }
+    }
+}
+
+/* Carrinho em telas menores */
+@media (max-width: 1000px) {
+    #carrinho #conteudo-carrinho {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Itens no celular */
+@media (max-width: 550px) {
+    #carrinho #esquerda .item {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 18px;
+
+        .imagem {
+            width: 90px;
+            height: 90px;
+        }
+        .texto {
+            min-width: 130px;
+        }
+        .subtotal-item {
+            width: 100%;
+            text-align: right;
+        }
+    }
+}

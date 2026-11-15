@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="RedBurguer: burgers artesanais, combos e bons momentos.">
+        <title>Minha conta | RedBurguer</title>
+
+        <link rel="icon" href="imagens/burger.svg" type="image/svg+xml">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/perfil.css">
+    </head>
+
+    <body class="claro">
+        <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+        <header>
+            <div class="largura">
+                <a class="logo" href="index.html" aria-label="RedBurguer - Início"></a>
+
+                <button id="abrir-menu" type="button" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">
+                    <span class="icone menu" aria-hidden="true"></span>
+                </button>
+
+                <nav id="menu" aria-label="Menu principal">
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+
+                        <li><a href="produtos.html">Produtos</a></li>
+
+                        <li><a href="pedidos.html">Pedidos</a></li>
+
+                        <li><a href="carrinho.html">Carrinho</a></li>
+
+                        <li><a href="perfil.html" class="ativo" aria-current="page">Perfil</a></li>
+                    </ul>
+
+                    <div id="conta">
+                        <a class="botao borda" href="login.html">Entrar</a>
+                        <a class="botao" href="cadastro.html">Cadastrar</a>
+                    </div>
+                </nav>
+
+                <button id="trocar-tema" type="button" aria-label="Ativar modo escuro" aria-pressed="false">
+                    <span class="icone lua" aria-hidden="true"></span>
+                </button>
+            </div>
+        </header>
+
+        <main id="conteudo">
+            <section id="perfil" class="largura">
+                <div class="titulo">
+                    <h1>Minha conta</h1>
+                </div>
+
+                <div id="colunas">
+                    <aside id="esquerda">
+                        <div class="avatar" role="img" aria-label="Avatar de usuário"></div>
+                        <h2 id="nome-perfil">Seu perfil</h2>
+                        <a href="#dados"><span class="icone usuario" aria-hidden="true"></span> Meus dados</a>
+                        <a href="pedidos.html"><span class="icone sacola" aria-hidden="true"></span> Meus pedidos</a>
+                        <a href="#endereco"><span class="icone local" aria-hidden="true"></span> Meu endereço</a>
+                        <a href="#preferencias"><span class="icone ajustes" aria-hidden="true"></span> Preferências</a>
+                    </aside>
+
+                    <div id="direita">
+                        <section id="dados">
+                            <h2><span class="icone usuario" aria-hidden="true"></span> Meus dados</h2>
+
+                            <form id="form-perfil" method="post" novalidate>
+                                <div class="campo">
+                                    <label for="nome">Nome completo</label>
+                                    <input id="nome" type="text" autocomplete="name" maxlength="100" required>
+                                </div>
+
+                                <div class="campo">
+                                    <label for="email">E-mail</label>
+                                    <input id="email" type="email" autocomplete="email" maxlength="150" required>
+                                </div>
+
+                                <div class="campo">
+                                    <label for="telefone">Telefone</label>
+                                    <input id="telefone" type="tel" autocomplete="tel" maxlength="20">
+                                </div>
+
+                                <button id="salvar-perfil" class="botao" type="submit">Salvar alterações</button>
+                                <p id="mensagem-perfil" role="status" hidden></p>
+                            </form>
+                        </section>
+
+                        <section id="endereco">
+                            <div class="topo">
+                                <h2><span class="icone local" aria-hidden="true"></span> Meu endereço</h2>
+                                <button id="abrir-endereco" type="button"><span class="icone mais" aria-hidden="true"></span> Adicionar endereço</button>
+                            </div>
+
+                            <p id="endereco-salvo" hidden></p>
+                            <p id="mensagem-endereco" role="status" hidden></p>
+
+                            <form id="form-endereco" method="post" novalidate hidden>
+                                <div class="linha">
+                                    <div class="campo">
+                                        <label for="cep">CEP</label>
+                                        <input id="cep" name="cep" type="text" inputmode="numeric" maxlength="9" pattern="[0-9]{5}-?[0-9]{3}" placeholder="00000-000" required>
+                                    </div>
+                                    <div class="campo">
+                                        <label for="rua">Rua</label>
+                                        <input id="rua" type="text" autocomplete="address-line1" maxlength="120" required>
+                                    </div>
+                                </div>
+
+                                <div class="linha">
+                                    <div class="campo">
+                                        <label for="numero">Número</label>
+                                        <input id="numero" type="text" maxlength="20" required>
+                                    </div>
+                                    <div class="campo">
+                                        <label for="complemento">Complemento</label>
+                                        <input id="complemento" type="text" autocomplete="address-line2" maxlength="100">
+                                    </div>
+                                </div>
+
+                                <div class="campo">
+                                    <label for="bairro">Bairro</label>
+                                    <input id="bairro" type="text" maxlength="80" required>
+                                </div>
+
+                                <div class="linha">
+                                    <div class="campo">
+                                        <label for="cidade">Cidade</label>
+                                        <input id="cidade" type="text" autocomplete="address-level2" maxlength="80" required>
+                                    </div>
+                                    <div class="campo">
+                                        <label for="uf">UF</label>
+                                        <input id="uf" type="text" autocomplete="address-level1" pattern="AC|AL|AP|AM|BA|CE|DF|ES|GO|MA|MT|MS|MG|PA|PB|PR|PE|PI|RJ|RN|RS|RO|RR|SC|SP|SE|TO" title="Informe a sigla de um estado brasileiro, como MG." maxlength="2" placeholder="SP" required>
+                                    </div>
+                                </div>
+
+                                <div class="acoes">
+                                    <button id="salvar-endereco" class="botao" type="submit">Salvar endereço</button>
+                                    <button id="fechar-endereco" class="botao borda" type="button">Cancelar</button>
+                                </div>
+                            </form>
+                        </section>
+
+                        <section id="preferencias">
+                            <h2><span class="icone ajustes" aria-hidden="true"></span> Preferências</h2>
+                            <div class="linha">
+                                <p>Modo escuro</p>
+                                <button id="tema-perfil" type="button" role="switch" aria-checked="false" aria-label="Modo escuro">
+                                    <span></span>
+                                </button>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="largura">
+                <div id="marca">
+                    <a class="logo" href="index.html" aria-label="RedBurguer - Início"></a>
+                    <p>Mais que um lanche,<br>um bom momento.</p>
+                </div>
+
+                <div id="paginas">
+                    <h3>Explore</h3>
+                    <a href="produtos.html">Produtos</a>
+                    <a href="pedidos.html">Meus pedidos</a>
+                    <a href="carrinho.html">Carrinho</a>
+                </div>
+
+                <div id="sobre">
+                    <h3>Feito para aproximar.</h3>
+                    <p>Burgers no capricho, ingredientes frescos e aquele sabor que dá vontade de repetir.</p>
+                </div>
+            </div>
+
+            <p id="direitos">RedBurguer. Sabor que reúne.</p>
+        </footer>
+
+        <script src="js/tema.js"></script>
+        <script src="js/login.js"></script>
+        <script src="js/menu.js"></script>
+        <script src="js/perfil.js"></script>
+    </body>
+</html>
